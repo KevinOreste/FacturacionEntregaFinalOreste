@@ -74,6 +74,8 @@ public class ProductService {
 
             if(productOptional.isEmpty())
                 throw new Exception("El producto con id: " + requestProductDetail.getProduct_id() + " no existe");
+            if(requestProductDetail.getQuantity()<1)
+                throw new Exception("La cantidad para un producto no puede ser 0!");
             if (!productOptional.get().isEnabled())
                 throw new Exception("El producto con id " + requestProductDetail.getProduct_id() + " no está habilitado");
             if ((productOptional.get().getStock()- requestProductDetail.getQuantity()) <= 0)

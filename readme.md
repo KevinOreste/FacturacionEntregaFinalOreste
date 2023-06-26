@@ -1,7 +1,5 @@
 # API - Facturacion Entrega final
 
-![class](/doc/DER-ABM.png)
-
 ## Funcionalidad
 
 La aplicación consiste en un sistema de ABM de clientes, productos y facturas. Para el mismo se disponibilizan distintas APIs que 
