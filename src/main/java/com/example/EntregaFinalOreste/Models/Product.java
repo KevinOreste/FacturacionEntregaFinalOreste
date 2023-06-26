@@ -14,14 +14,14 @@ public class Product {
     private String code;
     private Integer stock;
     private Integer price;
-    private boolean enable = true;
+    private boolean enabled = true;
 
-    public boolean isEnable() {
-        return enable;
+    public boolean isEnabled() {
+        return enabled;
     }
 
-    public void setEnable(boolean enable) {
-        this.enable = enable;
+    public void setEnabled(boolean enable) {
+        this.enabled = enable;
     }
 
     public String getTitle() {
@@ -81,7 +81,7 @@ public class Product {
                 ", code='" + code + '\'' +
                 ", stock=" + stock +
                 ", price=" + price +
-                ", enable=" + enable +
+                ", enable=" + enabled +
                 '}';
     }
 }

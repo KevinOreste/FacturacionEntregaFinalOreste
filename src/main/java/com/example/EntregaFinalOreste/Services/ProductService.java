@@ -43,9 +43,9 @@ public class ProductService {
         Optional<Product> product = productRepository.findById(id);
         if (product.isEmpty())
             throw new Exception("No se encontró el producto!");
-        if (!product.get().isEnable())
+        if (!product.get().isEnabled())
             throw new Exception("El producto ya se encuentra deshabilitado!");
-        product.get().setEnable(false);
+        product.get().setEnabled(false);
         return productRepository.save(product.get());
     }
 
@@ -74,7 +74,7 @@ public class ProductService {
 
             if(productOptional.isEmpty())
                 throw new Exception("El producto con id: " + requestProductDetail.getProduct_id() + " no existe");
-            if (!productOptional.get().isEnable())
+            if (!productOptional.get().isEnabled())
                 throw new Exception("El producto con id " + requestProductDetail.getProduct_id() + " no está habilitado");
             if ((productOptional.get().getStock()- requestProductDetail.getQuantity()) <= 0)
                 throw new Exception("No quedó stock disponible para el producto con id " + requestProductDetail.getProduct_id());

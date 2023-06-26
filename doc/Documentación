@@ -1,0 +1,23 @@
+Clientes
+Las funciones que vamos a poder realizar son: crear un cliente,
+borrar un cliente (se le modifica el campo enabled en false, no se borra el registro),
+modificar un cliente y obtener los datos de este mismo teniendo su ID. Cuando se borra un
+cliente,
+este mismo queda deshabilitado para generar nuevas facturas, pero se
+siguen manteniendo todas las facturas asociadas al cliente borrado en la BD.
+
+Productos
+Las funciones que vamos a poder realizar son: crear un producto,
+borrar un producto (se le modifica el campo “enabled” en false, no se borra el registro),
+modificar un producto, obtener un producto por su ID y obtener un listado completo con todos
+los productos registrados.
+Cuando se borra un producto, este mismo queda deshabilitado para generar nuevas facturas,
+pero se siguen manteniendo todas las facturas asociadas al producto borrado en la BD.
+
+Facturas
+Las funciones que vamos a poder realizar son: crear una factura, obtener un listado con todas
+las facturas asociadas a un cliente y obtener una factura por su ID (devolviendo todo el detalle
+de esta).
+
+Pd: En nuestra aplicación ya vamos a contar con 4 clientes y 5 productos creados, para probar
+las diferentes funciones de la misma.

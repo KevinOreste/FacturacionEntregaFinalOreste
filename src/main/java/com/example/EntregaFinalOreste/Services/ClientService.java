@@ -40,9 +40,9 @@ public class ClientService {
         Optional<Client> client = clientRepository.findById(id);
         if (client.isEmpty())
             throw new Exception("No se encontró el usuario");
-        if(!client.get().isEnable())
+        if(!client.get().isEnabled())
             throw new Exception("El usuario ya está deshabilitado");
-        client.get().setEnable(false);
+        client.get().setEnabled(false);
         return clientRepository.save(client.get());
     }
 
@@ -50,7 +50,7 @@ public class ClientService {
         Optional<Client> clientExist = clientRepository.findById(id);
         if (clientExist.isEmpty())
             throw new Exception("El cliente con id " + id + " no fue encontrado");
-        if(!clientExist.get().isEnable())
+        if(!clientExist.get().isEnabled())
             throw new Exception("El cliente con id " + id + " está deshabilitado");
             return clientExist.get();
     }

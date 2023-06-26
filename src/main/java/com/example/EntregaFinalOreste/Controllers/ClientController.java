@@ -20,7 +20,7 @@ public class ClientController {
     public ResponseEntity<Object> createClient(@RequestBody ClientDTO client) {
         try {
             Client data = clientService.createClient(client);
-            return ResponseHandler.generateResponse("Se creó el usuario!", HttpStatus.OK, data);
+            return ResponseHandler.generateResponse("Se creó el cliente!", HttpStatus.OK, data);
         }catch (Exception e){
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR, null);
         }
@@ -31,7 +31,7 @@ public class ClientController {
         public ResponseEntity<Object> deleteClient (@PathVariable int id){
         try{
             Client client = clientService.deleteClient(id);
-            return ResponseHandler.generateResponse("Se deshabilitó el usuario!",
+            return ResponseHandler.generateResponse("Se deshabilitó el cliente!",
                     HttpStatus.OK,
                     client);
         }catch (Exception e){
@@ -46,7 +46,7 @@ public class ClientController {
     public ResponseEntity<Object> getClientById (@PathVariable int id){
         try {
             Client data = clientService.getClientById(id);
-            return ResponseHandler.generateResponse("Se encontró el usuario!", HttpStatus.OK, data);
+            return ResponseHandler.generateResponse("Se encontró el cliente!", HttpStatus.OK, data);
         }catch (Exception e){
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR, null);
         }
@@ -56,7 +56,7 @@ public class ClientController {
     public ResponseEntity<Object> modifyClient(@RequestBody ClientDTO clientDTO, @PathVariable int id){
         try {
         Client data = clientService.modifyClient(clientDTO, id);
-        return ResponseHandler.generateResponse("Se modificó el usuario!", HttpStatus.OK, data);
+        return ResponseHandler.generateResponse("Se modificó el cliente!", HttpStatus.OK, data);
         }catch (Exception e){
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR, null);
         }

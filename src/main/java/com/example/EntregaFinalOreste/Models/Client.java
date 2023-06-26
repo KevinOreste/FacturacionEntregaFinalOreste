@@ -14,14 +14,14 @@ public class Client {
     private String name;
     private String lastName;
     private Integer document;
-    private boolean enable = true;
+    private boolean enabled = true;
 
-    public boolean isEnable() {
-        return enable;
+    public boolean isEnabled() {
+        return enabled;
     }
 
-    public void setEnable(boolean enable) {
-        this.enable = enable;
+    public void setEnabled(boolean enable) {
+        this.enabled = enable;
     }
 
     public Integer getDocument() {
@@ -63,7 +63,7 @@ public class Client {
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", document=" + document +
-                ", enable=" + enable +
+                ", enable=" + enabled+
                 '}';
     }
 }
