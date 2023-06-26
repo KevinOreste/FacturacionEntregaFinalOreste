@@ -80,6 +80,7 @@ public class ProductService {
                 throw new Exception("No quedó stock disponible para el producto con id " + requestProductDetail.getProduct_id());
             productList.add(productOptional.get());
             productOptional.get().setStock(productOptional.get().getStock() - requestProductDetail.getQuantity());
+            productRepository.save(productOptional.get());
         }
         return productList;
     }

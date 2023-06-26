@@ -1,6 +1,12 @@
 # API - Facturacion Entrega final
 
-![class](doc/DER-ABM.png)
+![class](/doc/DER-ABM.png)
+
+## Funcionalidad
+
+La aplicación consiste en un sistema de ABM de clientes, productos y facturas. Para el mismo se disponibilizan distintas APIs que 
+permiten la administración de los mismos. Además cuenta con un sistema de manejo de errores, el cual permite mostrar con claridad cualquier
+error al usuario. 
 
 ## Requerimientos
 
@@ -24,3 +30,9 @@ mvn clean install
 cd <carpeta del proyecto>
 mvn spring-boot:run
 ```
+
+## Dependencias utilizadas
+
+- [ ]  **Spring Data JPA**: Ayuda a persistir datos en aplicaciones Java al ofrecer una capa de abstracción que facilita el mapeo objeto-relacional, así como hacer operaciones CRUD.
+- [ ]  **Spring Web**: Proporciona herramientas para la creación de controladores, manejo de peticiones y respuestas HTTP, inyección de dependencias, entre otros.
+- [ ]  **H2 Database**: Es una base de datos ligera, rápida y fácil de configurar, que se puede ejecutar en memoria o como un servidor independiente.
